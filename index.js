@@ -14,18 +14,24 @@ dotenv.config();
 conectarDB();
 
 // Configurar CORS
-const whitelist = [process.env.FRONTEND_URL];
+const whitelist = process.env.FRONTEND_URL;
+
+// const corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whitelist.includes(origin)) {
+//       // Puede consultar la API
+//       callback(null, true);
+//     } else {
+//       // No esta permitido
+//       callback(new Error("Error de Cors"));
+//     }
+//   },
+// };
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.includes(origin)) {
-      // Puede consultar la API
-      callback(null, true);
-    } else {
-      // No esta permitido
-      callback(new Error("Error de Cors"));
-    }
-  },
+  origin: 'https://lively-mandazi-a382b5.netlify.app', // Sustituye con el dominio permitido
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true, // Habilita el intercambio de cookies y encabezados de autenticación
 };
 
 app.use(cors(corsOptions));
