@@ -29,7 +29,7 @@ const whitelist = [process.env.FRONTEND_URL];
 // };
 
 const corsOptions = {
-  origin: 'http://localhost:5173', // Sustituye con el dominio permitido
+  origin: 'https://mern-project-frontend-nine.vercel.app', // Sustituye con el dominio permitido
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Habilita el intercambio de cookies y encabezados de autenticación
 };
