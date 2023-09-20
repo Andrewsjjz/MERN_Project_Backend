@@ -29,7 +29,7 @@ const whitelist = process.env.FRONTEND_URL;
 // };
 
 const corsOptions = {
-  origin: 'https://lively-mandazi-a382b5.netlify.app', // Sustituye con el dominio permitido
+  origin: 'https://steady-brigadeiros-0f80ba.netlify.app', // Sustituye con el dominio permitido
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true, // Habilita el intercambio de cookies y encabezados de autenticación
 };
